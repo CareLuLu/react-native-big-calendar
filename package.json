@@ -5,8 +5,8 @@
   "jsnext:main": "build/index.es.js",
   "module": "build/index.es.js",
   "types": "build/index.d.ts",
-  "repository": "git@github.com:acro5piano/react-native-big-calendar",
-  "author": "gosho-kazuya <ketsume0211@gmail.com>",
+  "repository": "git@github.com:CareLuLu/react-native-big-calendar",
+  "author": "igor-barroso <igor.barroso@carelulu.com>",
   "license": "MIT",
   "scripts": {
     "prepare": "simple-git-hooks || true",
@@ -23,7 +23,9 @@
     "prepublish": "npm run build",
     "build": "npm-run-all build:clean build:ts",
     "build:clean": "rimraf build/",
-    "build:ts": "env NODE_ENV=production rollup -c"
+    "build:ts": "env NODE_ENV=production rollup -c",
+    "build:tarball": "tar -cvf build.tar ./build ./CHANGELOG.md ./README.md ./package.json ./LICENSE",
+    "build:full": "npm-run-all build:clean build:ts build:tarball"
   },
   "dependencies": {
     "calendarize": "^1.1.1",

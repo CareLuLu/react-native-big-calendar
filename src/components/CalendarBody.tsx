@@ -150,7 +150,7 @@ function _CalendarBody<T extends ICalendarEventBase>({
         ref={scrollView}
         scrollEventThrottle={32}
         {...(Platform.OS !== 'web' ? panResponder.panHandlers : {})}
-        showsVerticalScrollIndicator={false}
+        showsVerticalScrollIndicator={true}
         nestedScrollEnabled
         contentOffset={Platform.OS === 'ios' ? { x: 0, y: scrollOffsetMinutes } : { x: 0, y: 0 }}
       >
